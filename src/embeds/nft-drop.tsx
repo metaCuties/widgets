@@ -185,13 +185,6 @@ const ClaimButton: React.FC<ClaimPageProps> = ({
             : "Minting Unavailable"}
         </Button>
       </Flex>
-      {claimedSupply.data && (
-        <Text size="label.md" color="green.800">
-          {`${claimedSupply.data?.toString()} / ${(
-            claimedSupply.data?.add(unclaimedSupply.data || 0) || 0
-          ).toString()} claimed`}
-        </Text>
-      )}
     </Stack>
   );
 };
